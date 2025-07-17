@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="./bundle.js"></script>
+    </head>
+    <body>
+        <script>
+            const hash = getHash();
+            const redirect = new URLSearchParams(window.location.search).get("src");
+
+            location.href = `byond://?src=${redirect}&hash=${hash}`;
+        </script>
+    </body>
+</html>

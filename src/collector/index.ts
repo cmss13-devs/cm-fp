@@ -1,0 +1,14 @@
+import "./availsize";
+import "./canvas";
+import "./colordepth";
+import "./colorgamut";
+import "./concurrency";
+import "./fonts";
+import "./hdr";
+import "./language";
+import "./latency";
+import "./memory";
+import "./pixeldepth";
+import "./screensize";
+import "./timezone";
+import "./webgl";
