@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc && npx webpack"
+    "build": "npx tsc && npx webpack --mode=production",
+    "build:dev": "npx tsc && npx webpack"
   },
   "keywords": [],
   "author": "",
