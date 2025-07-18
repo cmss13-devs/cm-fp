@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v4
 
       - name: Build
@@ -19,6 +19,7 @@ jobs:
           npm install
           npm run build
           cp index.html dist/index.html
+          cp -p debug.html dist/debug.index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

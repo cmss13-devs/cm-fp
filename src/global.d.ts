@@ -4,7 +4,8 @@ interface Navigator {
 
 interface Window {
   queryLocalFonts: () => Promise<{ postscriptName: string }[]>;
-  getHash: () => void;
+  getComponents: () => Promise<string>;
+  getHash: () => Promise<string>;
 }
 
 interface Screen {

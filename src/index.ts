@@ -17,3 +17,12 @@ window.getHash = async (): Promise<string> => {
 
   return hash;
 };
+
+window.getComponents = async (): Promise<string> => {
+  const obj: { [key: string]: string } = {};
+  for (const collector of CollectorMetadata.COLLECTORS) {
+    obj[collector.name] = await collector.get();
+  }
+
+  return JSON.stringify(obj, null, 2);
+};
