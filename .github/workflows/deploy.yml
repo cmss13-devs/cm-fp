@@ -19,7 +19,8 @@ jobs:
           npm install
           npm run build
           cp index.html dist/index.html
-          cp -p debug.html dist/debug.index.html
+          mkdir dist/debug
+          cp debug.html dist/debug/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
