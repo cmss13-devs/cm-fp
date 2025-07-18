@@ -6,6 +6,19 @@ interface Navigator {
     dischargingTime: number;
     level: number;
   }>;
+  userAgentData: {
+    getHighEntropyValues: (hints: string[]) => Promise<{
+      architecture: string;
+      brands: { brand: string; version: string }[];
+      mobile: boolean;
+      model: string;
+      platform: string;
+      platformVersion: string;
+    }>;
+  };
+  bluetooth: {
+    getAvailability: () => Promise<boolean>;
+  };
 }
 
 interface Window {

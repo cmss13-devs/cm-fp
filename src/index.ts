@@ -1,7 +1,7 @@
 import { CollectorMetadata } from "./types/collector";
 import "./collector/index";
 
-const HASH_VERSION = 2 as const;
+const HASH_VERSION = 3 as const;
 
 window.getHash = async (): Promise<string> => {
   let acquired = "";
@@ -20,7 +20,7 @@ window.getHash = async (): Promise<string> => {
   return `v${HASH_VERSION}:${hash}`;
 };
 
-window.getComponents = async (): Promise<string> => {
+window.getComponents = async (stringify: boolean = true): Promise<any> => {
   const obj: { [key: string]: string } = {};
   for (const collector of CollectorMetadata.COLLECTORS) {
     obj[collector.name] = await collector.get();
@@ -28,5 +28,5 @@ window.getComponents = async (): Promise<string> => {
 
   obj["version"] = `v${HASH_VERSION}`;
 
-  return JSON.stringify(obj, null, 2);
+  return obj;
 };

@@ -1,5 +1,6 @@
 import "./availsize";
 import "./battery";
+import "./bluetooth";
 import "./canvas";
 import "./colordepth";
 import "./colorgamut";
@@ -14,3 +15,4 @@ import "./pixeldepth";
 import "./screensize";
 import "./timezone";
 import "./webgl";
+import "./windowsversion";

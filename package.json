@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc && npx webpack --mode=production",
-    "build:dev": "npx tsc && npx webpack"
+    "build": "npx tsc && npx webpack --mode=production && mkdir dist/debug && cp index.html dist/index.html && cp debug.html dist/debug/index.html",
+    "build:dev": "npx tsc && npx webpack && cp index.html dist/index.html && cp debug.html dist/debug/index.html"
   },
   "keywords": [],
   "author": "",
