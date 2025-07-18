@@ -1,8 +1,10 @@
 import "./availsize";
+import "./battery";
 import "./canvas";
 import "./colordepth";
 import "./colorgamut";
 import "./concurrency";
+import "./devices";
 import "./fonts";
 import "./hdr";
 import "./language";

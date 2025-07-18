@@ -1,5 +1,11 @@
 interface Navigator {
   deviceMemory: number;
+  getBattery: () => Promise<{
+    charging: number;
+    chargingTime: number;
+    dischargingTime: number;
+    level: number;
+  }>;
 }
 
 interface Window {
